@@ -53,28 +53,6 @@ peak-fo/
 
 ---
 
-## 💾 数据准备
-
-仓库当前采用与论文实验对齐的最小 `dataset/` 目录，只保留两个处理后的 CSV 入口：
-
-```text
-dataset/
-├── electricity/
-│   └── electricity_mixed_with_peaks_lookahead_5.csv
-└── load_data/
-    └── hf_load_data/
-        └── hf_load_data_20210101-20250925_mixed_with_peaks_lookahead_3.csv
-```
-
-- `dataset/electricity/`：论文中的 ELC 基准数据
-- `dataset/load_data/hf_load_data/`：论文中的 WLEL 数据
-- 提供的脚本直接读取这两份处理后的 CSV
-- 更详细的数据组织、字段要求和划分规则见 [dataset/README.md](dataset/README.md)
-
-> 📦 **数据集开放发布**：**世界级电力负荷数据集（WLEL）**——采集自中国上海浦东电网区域（2021-01 至 2025-09，共 41,476 条逐小时记录，峰值占比 7.10%）——将以开放研究协议公开发布，并同步提供完整预处理流程，以支持可复现的峰值预测研究。
-
----
-
 ## 🛠️ 安装
 
 ### 环境要求

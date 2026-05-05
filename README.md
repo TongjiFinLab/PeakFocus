@@ -53,28 +53,6 @@ peak-fo/
 
 ---
 
-## 💾 Dataset
-
-The repository now keeps a paper-aligned, minimal `dataset/` layout with two processed CSV entry points:
-
-```text
-dataset/
-├── electricity/
-│   └── electricity_mixed_with_peaks_lookahead_5.csv
-└── load_data/
-    └── hf_load_data/
-        └── hf_load_data_20210101-20250925_mixed_with_peaks_lookahead_3.csv
-```
-
-- `dataset/electricity/`: ELC benchmark
-- `dataset/load_data/hf_load_data/`: WLEL dataset
-- The default scripts consume these processed CSVs directly
-- Detailed dataset organization, expected columns, and split behavior are documented in [dataset/README.md](dataset/README.md)
-
-> 📦 **Dataset Release**: The **World-scale Logged Electricity Load (WLEL)** — an industrial-scale hourly load dataset collected from the Shanghai Pudong grid zone (2021-01 to 2025-09, 41,476 records, 7.10% peak ratio) — will be publicly released under an open research license, together with the complete preprocessing pipeline, to facilitate reproducible peak-forecasting research.
-
----
-
 ## 🛠️ Installation
 
 ### Prerequisites
