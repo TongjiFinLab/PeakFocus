@@ -229,19 +229,19 @@ $$
 
 ### Balanced metrics
 
-PeakFocus uses BPE and PIM in evaluation logs:
+PeakFocus reports BCS (Balanced Composite Score) and PIM (Peak Integrated Metric).
 
 $$
-\text{BPE}=\alpha(1-F_1)+(1-\alpha)\left(1-\frac{1}{1+\text{TP-MSE}}\right)
+\text{BCS}=\alpha(1-F_1)+(1-\alpha)\left(1-\frac{1}{1+\text{TP-MSE}}\right)
 $$
 
 Default \(\alpha=0.5\).
 
 $$
-\text{PIM}=\frac{1+\text{TP-MSE}}{F_1+0.01}
+\text{PIM}=\frac{1+\text{TP-MSE}}{F_1+\epsilon}
 $$
 
-Lower BPE/PIM indicates better peak-aware performance.
+Default \(\epsilon=0.01\). Lower BCS/PIM indicates better peak-aware performance.
 
 ---
 

@@ -499,7 +499,7 @@ class Exp_Peak_Detect_LTF_Seq2Peak(Exp_Basic):
             e_class = 1.0 - f1
             e_reg = 1.0 - (1.0 / (1.0 + tp_mse))
             bpe = (alpha * e_class) + ((1.0 - alpha) * e_reg)
-            pim = (1.0 + tp_mse) / (f1 + 0.01)
+            pim = (1.0 + tp_mse) / (f1 + 0.01)  # 论文 eq:pim: PIM = (1+TP_MSE)/(F1+eps)
 
             peak_cls_metrics = {
                 'Peak_Cls_MSE': overall_mse,
@@ -959,7 +959,7 @@ class Exp_Peak_Detect_LTF_Seq2Peak(Exp_Basic):
             e_class = 1.0 - f1
             e_reg = 1.0 - (1.0 / (1.0 + tp_mse))
             balanced_peak_error = (alpha * e_class) + ((1.0 - alpha) * e_reg)
-            peak_pim = (1.0 + tp_mse) / (f1 + 0.01)
+            peak_pim = (1.0 + tp_mse) / (f1 + 0.01)  # 论文 eq:pim: PIM = (1+TP_MSE)/(F1+eps)
             
             peak_cls_metrics = {
                 'Peak_Cls_TP': avg_tp,

@@ -191,7 +191,7 @@ def calculate_peak_metrics(tp_pairs: List[Tuple[int, int]],
     e_reg = 1.0 - (1.0 / (1.0 + mse))
     balanced_peak_error = (alpha * e_class) + ((1.0 - alpha) * e_reg)
     
-    # PIM (Peak Integrated Metric)
+    # PIM (Peak Integrated Metric), 论文 eq:pim: PIM = (1 + TP_MSE) / (F1 + eps)
     peak_pim = (1.0 + mse) / (f1_score + 0.01)
     
     return {
@@ -477,12 +477,10 @@ def calculate_peak_classification_metrics(peak_preds: np.ndarray,
     balanced_peak_error = (alpha * e_class) + ((1.0 - alpha) * e_reg)
     # --- 结束 BPE 计算 ---
     
-    # --- (新增) PIM (Peak Integrated Metric) 计算 ---
-    # 逻辑: PIM = (1 + TP_MSE) * (1 + (1 - F1_Score)) - 1.0
-    # E_reg = 1.0 + tp_mse (回归误差项)
-    # E_cls = 1.0 + (1.0 - f1) (检测误差项)
-    # PIM 是一个乘法指标, 最小(完美)值为 1.0, 任何错误都会使其增加
-    # peak_pim = (1.0 + tp_mse) * (1.0 + (1.0 - f1)) - 1.0
+    # --- PIM (Peak Integrated Metric) 计算 ---
+    # 论文 eq:pim:  PIM = (1 + TP_MSE) / (F1 + eps)
+    # eps = 0.01 (与论文一致, 防止 F1=0 的除零)
+    # 最小(完美)值为 1/(1+eps) ≈ 0.99, 任何错误都会使其增加
     peak_pim = (1.0 + tp_mse) / (f1 + 0.01)
     # --- 结束 PIM 计算 ---
     

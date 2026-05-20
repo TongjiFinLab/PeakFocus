@@ -150,7 +150,7 @@ def calculate_peak_metrics(tp_pairs: List[Tuple[int, int]],
     e_reg = 1.0 - (1.0 / (1.0 + tp_mse))  # 标准化回归误差
     balanced_peak_error = (alpha * e_class) + ((1.0 - alpha) * e_reg)
     
-    # PIM (Peak Integrated Metric): 检测精度与值误差的比值
+    # PIM (Peak Integrated Metric), 论文 eq:pim: PIM = (1 + TP_MSE) / (F1 + eps)
     peak_pim = (1.0 + tp_mse) / (f1_score + 0.01)
     
     return {

@@ -229,19 +229,19 @@ $$
 
 ### 综合指标
 
-训练日志中常用 BPE 与 PIM：
+PeakFocus 使用 BCS（Balanced Composite Score）和 PIM（Peak Integrated Metric）。
 
 $$
-\text{BPE}=\alpha(1-F_1)+(1-\alpha)\left(1-\frac{1}{1+\text{TP-MSE}}\right)
+\text{BCS}=\alpha(1-F_1)+(1-\alpha)\left(1-\frac{1}{1+\text{TP-MSE}}\right)
 $$
 
 默认 \(\alpha=0.5\)。
 
 $$
-\text{PIM}=\frac{1+\text{TP-MSE}}{F_1+0.01}
+\text{PIM}=\frac{1+\text{TP-MSE}}{F_1+\epsilon}
 $$
 
-BPE/PIM 越低表示峰值感知性能越好。
+默认 \(\epsilon=0.01\)。BCS/PIM 越低，峰值感知性能越好。
 
 ---
 
