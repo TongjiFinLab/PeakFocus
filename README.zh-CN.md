@@ -273,3 +273,25 @@ python visualization/code/model_analysis/visualize_interpretability.py
 - 运行指南：`RUN_GUIDE.md`
 - 脚本目录：`scripts/README.md`
 - 工具目录：`tools/README.md`
+
+---
+
+## 📖 引用
+
+如果本项目对您的研究有帮助，请引用我们的工作：
+
+```bibtex
+@article{yu2026peakfocus,
+  title={PeakFocus: Bridging Peak Localization and Intensity Regression via a Unified Multi-Scale Framework for Electricity Load Forecasting},
+  author={Yu, Wangzhi and Zhu, Peng and Zhao, Qing and Jiang, Yiwen and Cheng, Dawei},
+  journal={arXiv preprint arXiv:2605.21550},
+  year={2026}
+}
+
+@article{yu2026large,
+  title={Large Language Models for Time Series Analysis: Methodologies, Applications, and Emerging Challenges},
+  author={Yu, Wangzhi and Cheng, Dawei and Zhu, Lizhao and Jiang, Changjun},
+  year={2026},
+  publisher={TechRxiv}
+}
+```
