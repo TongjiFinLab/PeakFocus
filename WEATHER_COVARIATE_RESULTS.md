@@ -1,11 +1,16 @@
 # Weather-Covariate Study on WLEL
 
-We evaluate whether simple weather integration improves electricity load peak forecasting on WLEL. The external variables are hourly temperature and humidity aligned with the load series. We compare two strategies:
+The ICDE submission evaluates two load datasets with different covariate availability:
+
+- **ELC:** the public consumer-level benchmark used in our experiments does not provide weather covariates aligned with its load series. Therefore, a controlled weather ablation cannot be performed on ELC without introducing an external data source and uncertain spatial alignment.
+- **WLEL:** World Large-scale Electricity Load is our industrial grid-level dataset. Hourly temperature and humidity aligned with the WLEL load series are available, so we conduct the controlled weather-covariate study on WLEL.
+
+Accordingly, all results below use **WLEL**. We compare two weather-integration strategies:
 
 - **Concat:** concatenate temperature and humidity with the load input for both the encoder and decoder.
 - **Fusion:** use historical weather in the encoder and future-known weather in the decoder through structured gated fusion.
 
-The PeakFocus configuration, data split, and evaluation protocol remain unchanged. The temporal-only results are taken from the ICDE submission. Weather variants are averaged over three independent runs.
+The submitted temporal-only PeakFocus already uses calendar/timestamp features, but not meteorological variables. For this study, only the weather-input path changes; the PeakFocus configuration, WLEL split, peak detector, and evaluation protocol remain unchanged. The temporal-only results are taken from the ICDE submission, while each weather variant is averaged over three independent runs.
 
 | Setting | H | Recall ↑ | Precision ↑ | F1 ↑ | TP-MSE ↓ | TP-MAE ↓ | BCS ↓ | PIM ↓ | MSE ↓ | MAE ↓ | R² ↑ |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
