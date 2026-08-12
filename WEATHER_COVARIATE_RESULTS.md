@@ -10,7 +10,7 @@ Accordingly, all results below use **WLEL**. We compare two weather-integration 
 - **Concat:** concatenate temperature and humidity with the load input for both the encoder and decoder.
 - **Fusion:** use historical weather in the encoder and future-known weather in the decoder through structured gated fusion.
 
-The submitted temporal-only PeakFocus already uses calendar/timestamp features, but not meteorological variables. For this study, only the weather-input path changes; the PeakFocus configuration, WLEL split, peak detector, and evaluation protocol remain unchanged. The temporal-only results are taken from the ICDE submission, while each weather variant is averaged over three independent runs.
+The submitted temporal-only PeakFocus already uses calendar/timestamp features, but not meteorological variables. For this study, only the weather-input path changes; the PeakFocus configuration, WLEL split, peak detector, and evaluation protocol remain unchanged. The temporal-only results are taken from the ICDE submission, while each weather variant is averaged over five independent runs.
 
 | Setting | H | Recall ↑ | Precision ↑ | F1 ↑ | TP-MSE ↓ | TP-MAE ↓ | BCS ↓ | PIM ↓ | MSE ↓ | MAE ↓ | R² ↑ |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
