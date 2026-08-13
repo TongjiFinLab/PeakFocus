@@ -36,7 +36,8 @@
 | ELC | 720 | **tanh** | **0.712 ± 0.0269** | **0.751 ± 0.0185** | **0.731 ± 0.0286** | 1.221 ± 0.0514 | 0.870 ± 0.0421 | **0.408 ± 0.0047** | **2.996 ± 0.0453** |
 | ELC | 720 | sigmoid | 0.686 ± 0.0211 | 0.726 ± 0.0212 | 0.705 ± 0.0196 | **1.198 ± 0.0424** | **0.858 ± 0.0240** | 0.420 ± 0.0107 | 3.074 ± 0.1031 |
 | ELC | 720 | linear | 0.657 ± 0.0243 | 0.705 ± 0.0281 | 0.680 ± 0.0242 | 1.336 ± 0.0494 | 0.925 ± 0.0313 | 0.446 ± 0.0128 | 3.386 ± 0.1372 |
-*Note: mean ± sample SD over five independent seeds (n=5, ddof=1); bold denotes the best mean per dataset-horizon block.*
+
+> **Note:** Values are reported as mean ± sample SD over five independent seeds (n=5, ddof=1). Bold denotes the best mean within each dataset-horizon block.
 
 ### Findings and Rebuttal Relevance
 
@@ -75,7 +76,8 @@
 | ELC | 336 | max | **0.734 ± 0.0184** | 0.681 ± 0.0208 | 0.707 ± 0.0183 | 1.001 ± 0.0332 | 0.775 ± 0.0219 | 0.397 ± 0.0098 | 2.793 ± 0.0819 |
 | ELC | 720 | **average** | 0.712 ± 0.0269 | **0.751 ± 0.0185** | **0.731 ± 0.0286** | **1.221 ± 0.0514** | **0.870 ± 0.0421** | **0.408 ± 0.0047** | **2.996 ± 0.0453** |
 | ELC | 720 | max | **0.728 ± 0.0218** | 0.669 ± 0.0229 | 0.697 ± 0.0208 | 1.269 ± 0.0397 | 0.897 ± 0.0281 | 0.431 ± 0.0108 | 3.208 ± 0.1066 |
-*Note: mean ± sample SD over five independent seeds (n=5, ddof=1); bold denotes the best mean per dataset-horizon block.*
+
+> **Note:** Values are reported as mean ± sample SD over five independent seeds (n=5, ddof=1). Bold denotes the best mean within each dataset-horizon block.
 
 ### Findings and Rebuttal Relevance
 
