@@ -1,6 +1,6 @@
 # Weather-Covariate Results on WLEL
 
-> **Rebuttal mapping:** This reviewer-facing file provides the controlled weather-covariate evidence cited in R3.4.
+> **Rebuttal mapping:** This reviewer-facing file provides the controlled weather-covariate evidence cited in R3.3.
 
 ## 1. Scope and Experimental Setup
 
@@ -32,4 +32,4 @@ Only the weather-input path changes. The PeakFocus configuration, WLEL split, pe
 
 Neither lightweight strategy outperforms temporal-only PeakFocus at H=336 or H=720. This result does not imply that weather is generally unimportant for load forecasting. Instead, it shows that direct concatenation and basic structured fusion are insufficient under the current setting. Grid periodicity may already explain part of the demand pattern, temperature and humidity alone may be too coarse, and stronger fusion may require more reliable variables, tighter temporal alignment, missing-value modeling, and explicit treatment of future-weather uncertainty.
 
-This evidence directly supports R3.4: the model is not covariate-free, aligned weather variables can be incorporated through historical and future-known input paths, and the two evaluated lightweight strategies do not produce gains on WLEL.
+This evidence directly supports R3.3: the model is not covariate-free, aligned weather variables can be incorporated through historical and future-known input paths, and the two evaluated lightweight strategies do not produce gains on WLEL.
